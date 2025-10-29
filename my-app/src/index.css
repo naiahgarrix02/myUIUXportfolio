@@ -1,6 +1,7 @@
-@import "tailwindcss";
 @import url('https://fonts.cdnfonts.com/css/satoshi');
 @import url('https://fonts.cdnfonts.com/css/general-sans');
+@import "tailwindcss";
+
 
 .active {
   font-weight: 500;
