@@ -7,6 +7,7 @@ import Projects from './components/Projects'
 import Testimonials from './components/Testimonials'
 import Footer from './components/Footer'
 
+
 function App() {
   return (
     <div className="min-h-screen bg-black text-white font">
