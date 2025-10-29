@@ -1,36 +1,9 @@
 import React from 'react'
 import Marquee from 'react-fast-marquee'
 import Card from './Card'
+import { testimonials } from '../../constants/index.js'
 
 const Testimonials = () => {
-  const testimonials = [
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
-      name: "John Doe",
-      position: "Vendor",
-    },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
-      name: "Jane Smith",
-      position: "Customer",
-    },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
-      name: "Michael Green",
-      position: "Supplier",
-    },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
-      name: "Amelia Brown",
-      position: "Distributor",
-    },
-    {
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip",
-      name: "Kwame Boateng",
-      position: "Retailer",
-    },
-  ]
-
   return (
     <div className="px-[0px] mt-[60px]">
       <h1 className="text-[36px] font-regular greyish text-right mb-[40px] mr-[60px] ml-[60px]">
