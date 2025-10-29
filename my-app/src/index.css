@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import url('https://fonts.cdnfonts.com/css/satoshi');
+@import url('https://fonts.cdnfonts.com/css/general-sans');
+
+.active {
+  font-weight: 500;
+  color: white;
+}
+
+li{
+  color: rgb(204, 204, 204);
+}
+
+li:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.greyish {
+  color: #818181;
+}
+
+.font-general {
+  font-family: 'General Sans', sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+h1 {
+  font-family: 'General Sans', sans-serif;
+}
+
+.border-gradient {
+  border: 1px solid transparent;
+  border-image: linear-gradient(to top, black, white);
+  border-image-slice: 1;
+  border-radius: 16px;
+  background-clip: padding-box;
+}
+
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
