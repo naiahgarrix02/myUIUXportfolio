@@ -31,6 +31,7 @@ const Hero = () => {
       delay: 1,
     });
 
+  
     textRef.current = heroSplit.chars;
   }, []);
 
@@ -155,9 +156,10 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* <div className="pt-12 ml-3 font-[Satoshi] text-center">
-        <p>scroll down</p>
-      </div> */}
+      <div className="pt-12 ml-3 font-[Satoshi] text-center">
+        <p className="cursor-pointer" 
+        id="hero-text">scroll <span>down</span></p>
+      </div>
     </div>
   );
 };

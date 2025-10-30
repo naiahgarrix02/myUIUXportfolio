@@ -4,7 +4,7 @@ import { projectLinks } from '../../constants/index.js'
 const ProjectRow = () => {
   return (
     <div className='mt-12'>
-    <a className='cursor-pointer'>
+    <a className='cursor-pointer project-item'>
         <div className='font-[Satoshi] divide- divide-white '>
             {projectLinks.map((item) => (
                 <div

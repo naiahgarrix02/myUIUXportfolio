@@ -1,15 +1,66 @@
-import React from 'react'
-import ProjectRow from './ProjectRow'
+import React from 'react';
+import ProjectRow from './ProjectRow';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { SplitText, ScrollTrigger } from 'gsap/all';
+
+gsap.registerPlugin(SplitText, ScrollTrigger);
 
 const Projects = () => {
-  return (
-    <div className='mt-[60px] ml-[60px] mr-[60px]'>
-      <h1 className='text-[40px] font-regular mt-[36px] greyish text-center pb-[15px]'>featured projects.</h1>
-      <p className='font-[Satoshi] text-[18px] font-regular text-center'>Here are a few of my designs, showcasing my abilities and my <br /> 
-      approach to User Interface and User Experience Design.</p>
-      <ProjectRow />
-    </div>
-  )
-}
+  useGSAP(() => {
+    // Split text AFTER DOM is available
+    const projectSplit = new SplitText('#projects-text', { type: 'lines' });
 
-export default Projects
+    // Main timeline triggered when section enters viewport
+    const scrollTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#projects-section',
+        start: 'top 80%', // starts a bit earlier for smoothness
+      },
+    });
+
+    // Animate text lines
+    scrollTimeline.from(projectSplit.lines, {
+      opacity: 0,
+      yPercent: 100,
+      duration: 1,
+      ease: 'expo.out',
+      stagger: 0.1,
+    });
+
+    // Fade in project row after text
+    scrollTimeline.from(
+      '.project-row',
+      {
+        opacity: 0,
+        y: 50,
+        duration: 1.2,
+        ease: 'power3.out',
+      },
+      '-=0.5' // overlap timing slightly
+    );
+  }, []);
+
+  return (
+    <div id="projects-section" className="mt-[60px] ml-[60px] mr-[60px]">
+      <h1 className="text-[40px] font-regular mt-9 greyish text-center pb-[15px]">
+        featured projects.
+      </h1>
+
+      <p
+        id="projects-text"
+        className="font-[Satoshi] text-[18px] font-regular text-center"
+      >
+        Here are a few of my designs, showcasing my abilities and my <br />
+        approach to User Interface and User Experience Design.
+      </p>
+
+      {/* Add project-row class for GSAP targeting */}
+      <div className="project-row mt-[50px]">
+        <ProjectRow />
+      </div>
+    </div>
+  );
+};
+
+export default Projects;
