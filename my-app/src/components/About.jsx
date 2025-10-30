@@ -9,6 +9,7 @@ const About = () => {
   useGSAP(() => {
     const aboutSplit = new SplitText('#about-text', { type: 'lines' });
     
+    // Main text animations timeline
     const scrollTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: '#about-section',
@@ -25,7 +26,7 @@ const About = () => {
       duration: 1,
       yPercent: 100,
       ease: 'expo.out',
-      stagger: 0.02,
+      stagger: 0.04,
     });
 
     // Animation for the "about." heading
@@ -36,16 +37,25 @@ const About = () => {
       ease: 'expo.out',
     }, '-=0.5');
 
-    // Independent count up animations for each stat
-    const statNumbers = [
-      { element: '.stat-number-1', target: 3, duration: 1.5 },
-      { element: '.stat-number-2', target: 10, duration: 2 },
-      { element: '.stat-number-3', target: 5, duration: 1.8 }
+    // Animation for the stat descriptions
+    scrollTimeline.from('.stat-desc', {
+      opacity: 0,
+      y: 20,
+      duration: 0.8,
+      ease: 'expo.out',
+      stagger: 0.1,
+    }, '-=0.3');
+
+    // Independent count up animations for each stat with their own triggers
+    const stats = [
+      { selector: '.stat-number-1', value: 3, duration: 1.2 },
+      { selector: '.stat-number-2', value: 10, duration: 1.2 },
+      { selector: '.stat-number-3', value: 5, duration: 1.2 }
     ];
 
-    statNumbers.forEach((stat, index) => {
-      scrollTimeline.to(stat.element, {
-        innerText: stat.target,
+    stats.forEach((stat) => {
+      gsap.to(stat.selector, {
+        innerText: stat.value,
         duration: stat.duration,
         ease: 'power2.out',
         snap: { innerText: 1 },
@@ -53,18 +63,15 @@ const About = () => {
           innerText: function(innerText) {
             return Math.floor(innerText) + "+";
           }
+        },
+        scrollTrigger: {
+          trigger: stat.selector,
+          start: 'top 90%',
+          end: 'bottom 60%',
+          toggleActions: 'play none none reverse',
         }
-      }, `-=${0.8 - (index * 0.1)}`); // Slight offset but mostly overlapping
+      });
     });
-
-    // Animation for the stat descriptions - starts during count-up
-    scrollTimeline.from('.stat-desc', {
-      opacity: 0,
-      y: 30,
-      duration: 0.2,
-      ease: 'expo.out',
-      stagger: 0.1,
-    }, '-=1.2');
 
     return () => {
       aboutSplit.revert();

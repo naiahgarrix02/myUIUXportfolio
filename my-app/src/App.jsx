@@ -8,9 +8,8 @@ import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
 
 function App() {
-  
   return (
-    <div className="app-container">
+    <div className="app">
       <div className="content">
         <Hero />
         <About />

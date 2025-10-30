@@ -9,7 +9,7 @@ const projectLinks = [
     },
     {
         number: "002",
-        title: "Kairos Kharis Concepts",
+        title: "K.K. Concepts",
         location: "Accra, Ghana",
         role: "Lead Designer",
         image: "/images/arrowsl.png",
@@ -61,4 +61,7 @@ const testimonials = [
     },
   ]
 
-export { projectLinks, testimonials }
+export { 
+  projectLinks,
+  testimonials 
+}
