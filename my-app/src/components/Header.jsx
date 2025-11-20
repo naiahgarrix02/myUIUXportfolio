@@ -16,7 +16,7 @@ const Header = () => {
             <img src="/images/logo.png" alt="logo" className='w-[120px] md:w-[187px]'/>
         </div>
         <div>
-            <button className='border border-white rounded-full h-fit md:px-6 md:py-3 md:text-[16px] text-[12px] py-2 px-4 font-[Satoshi] font-regular'>contact me.</button>
+            <button className='border border-white rounded-full h-fit md:px-6 md:py-3 md:text-[16px] text-[12px] py-2 px-4 font-[Satoshi] font-regular lg:hover:bg-white lg:hover:text-black'>contact me.</button>
         </div>
     </div>
   )
