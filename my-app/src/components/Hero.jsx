@@ -101,7 +101,7 @@ const Hero = () => {
   }, { scope: blobContainerRef });
 
   return (
-    <div className="h-screen relative overflow-hidden">
+    <div className="h-[450px] md:h-screen w-full relative overflow-hidden">
       {/* Animated Blobs Background */}
       <div 
         ref={blobContainerRef}
@@ -135,10 +135,10 @@ const Hero = () => {
 
       {/* Existing Content - All margins and padding preserved */}
       <Header />
-      <div className="flex flex-row ml-[60px]">
+      <div className="flex flex-row ml-5 md:ml-[60px]">
         <div>
           <h1
-            className="text-[250px] font-regular leading-[220px] mt-9 cursor-default"
+            className="text-[64px] lg:text-[250px] font-regular leading-[55px] lg:leading-[220px] mt-14 md:mt-9 cursor-default"
             id="hero-text"
           >
             UI|<span className="greyish">UX</span>
@@ -146,20 +146,27 @@ const Hero = () => {
             DESIGNER.
           </h1>
           <p
-            className="ml-3 pt-7 font-[Satoshi] font-light"
+            className="hidden md:block md:w-[543px] ml-1 md:ml-3 pt-7 font-[Satoshi] font-light"
+            id="hero-paragraph"
+          >
+            Designing with intention, for usability, clarity, and impact. Creating<br />
+            digital experiences that feel effortless and meaningful.
+          </p>
+          <p
+            className="md:hidden w-[312px] ml-1 md:ml-3 pt-7 font-[Satoshi] font-light"
             id="hero-paragraph"
           >
             Designing with intention, for usability, clarity, and impact. Creating
-            <br />
-            digital experiences that feel effortless and meaningful.
+            digital experiences<br /> that feel effortless and meaningful.
           </p>
         </div>
       </div>
 
-      <div className="pt-12 ml-3 font-[Satoshi] text-center">
+      <div className="hidden md:block md:pt-12 md:ml-3 font-[Satoshi] md:text-center">
         <p className="cursor-pointer" 
         id="hero-text">scroll <span>down</span></p>
       </div>
+      <div className="pointer-events-none absolute bottom-0 left-0 h-18 w-full bg-linear-to-t from-black to-transparent md:hidden"></div>
     </div>
   );
 };

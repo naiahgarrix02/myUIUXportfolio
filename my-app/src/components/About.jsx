@@ -13,7 +13,7 @@ const About = () => {
     const scrollTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: '#about-section',
-        start: 'top 80%',
+        start: 'top 90%',
         end: 'bottom 20%',
         toggleActions: 'play none none reverse',
         markers: false,
@@ -48,8 +48,8 @@ const About = () => {
 
     // Independent count up animations for each stat with their own triggers
     const stats = [
-      { selector: '.stat-number-1', value: 3, duration: 1.2 },
-      { selector: '.stat-number-2', value: 10, duration: 1.2 },
+      { selector: '.stat-number-1', value: 2, duration: 1.2 },
+      { selector: '.stat-number-2', value: 7, duration: 1.2 },
       { selector: '.stat-number-3', value: 5, duration: 1.2 }
     ];
 
@@ -66,7 +66,7 @@ const About = () => {
         },
         scrollTrigger: {
           trigger: stat.selector,
-          start: 'top 90%',
+          start: 'top 100%',
           end: 'bottom 60%',
           toggleActions: 'play none none reverse',
         }
@@ -79,31 +79,37 @@ const About = () => {
   }, []);
 
   return (
-    <div className='ml-[60px] mr-[60px] mt-[60px]' id="about-section">
-      <div className='flex flex-row justify-between'>
-        <p className='text-[48px] font-[Satoshi] font-regular leading-14 mt-9' id="about-text">
-          I specialize in creating user interfaces that balance aesthetics and<br />
-          usability, sculpting pixel-perfect and functional designs that deliver <br />
+    <div className='ml-5 mr-5 mt-5 md:ml-[60px] md:mr-[60px] md:mt-[60px]' id="about-section">
+      <div className='flex flex-col-reverse md:flex-row justify-between'>
+        <p className='text-[24px] md:hidden font-[Satoshi] font-regular leading-8 mt-9' id="about-text">
+          I specialize in creating user interfaces that balance aesthetics and
+          usability, creating<br /> pixel-perfect and functional designs that deliver <br />
           seamless user experiences.
         </p>
 
-        <h1 className='text-[40px] font-regular mt-9 greyish' id="about-heading">about.</h1>
+        <p className='hidden md:block  md:text-[48px] font-[Satoshi] font-regular  md:leading-14 mt-9' id="about-text">
+          I specialize in creating user interfaces that balance aesthetics and<br />
+          usability, creating pixel-perfect and functional designs that deliver 
+          seamless<br /> user experiences.
+        </p>
+
+        <h1 className='text-[20px] md:text-[40px] font-regular mt-9 greyish' id="about-heading">about.</h1>
       </div>
 
-      <div className='mt-[90px] flex flex-row gap-50'>
+      <div className='mt-7 md:mt-[90px] flex flex-row md:gap-50 gap-[50px]'>
         <div>
-            <h1 className='text-[200px] leading-50 tracking-[-15px] stat-number-1'>0+</h1>
-            <p className='text-[24px] font-[Satoshi] font-light stat-desc'>years of Experience</p>
+            <h1 className='text-[56px] md:text-[200px] md:leading-50 md:tracking-[-15px] stat-number-1'>0+</h1>
+            <p className='text-[12px] md:text-[24px] font-[Satoshi] font-light stat-desc'>years of Experience</p>
         </div>
         
         <div>
-            <h1 className='text-[200px] leading-50 tracking-[-15px] stat-number-2'>0+</h1>
-            <p className='text-[24px] font-[Satoshi] font-light stat-desc'>projects worked on</p>
+            <h1 className='text-[56px] md:text-[200px] md:leading-50 md:tracking-[-15px] stat-number-2'>0+</h1>
+            <p className='text-[12px] md:text-[24px] font-[Satoshi] font-light stat-desc'>projects worked on</p>
         </div>
 
         <div>
-            <h1 className='text-[200px] leading-50 tracking-[-15px] stat-number-3'>0+</h1>
-            <p className='text-[24px] font-[Satoshi] font-light stat-desc'>satisfied clients & companies</p>
+            <h1 className='text-[56px] md:text-[200px] md:leading-50 md:tracking-[-15px] stat-number-3'>0+</h1>
+            <p className='text-[12px] md:text-[24px] font-[Satoshi] font-light stat-desc'>satisfied clients & companies</p>
         </div>
       </div>
     </div>

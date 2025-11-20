@@ -46,50 +46,50 @@ const Skillset = () => {
 
   return (
     <div
-      className='ml-[60px] mr-[60px] mt-[60px] mb-[109px] flex flex-col justify-between'
+      className='ml-5 mr-5 mt-15 mb-12 md:ml-[60px] md:mr-[60px] md:mt-[60px] md:mb-[109px] flex flex-col justify-between'
       id='skillset-section'
     >
-      <h1 className='text-[40px] font-regular mt-9 greyish'>
+      <h1 className='text-[20px] md:text-[40px] font-regular mt-9 greyish'>
         skillset & tools.
       </h1>
 
-      <div className='flex flex-row justify-between'>
+      <div className='flex flex-col md:flex-row justify-between'>
         <h1
           id='skillset-text'
-          className='text-[200px] font-[Satoshi] font-regular leading-[170px] mt-9 tracking-[-15px]'
+          className='text-[60px] md:text-[200px] font-[Satoshi] font-regular tracking-[-3px] leading-14 md:leading-[170px] mt-9 md:tracking-[-15px]'
         >
           ui/ux <span className='greyish'>branding</span>
           <br />
           graphic design
         </h1>
 
-        <div className='grid grid-cols-2 gap-6'>
+        <div className='grid grid-cols-2 gap-3 md:gap-6'>
           <div>
             <img
               src='/images/figma.png'
               alt='figma'
-              className='floating-icon inline-block w-[188px] h-[188px] grayscale-100 hover:grayscale-0 transition duration-300 hover:scale-110 hover:rotate-3'
+              className='floating-icon inline-block w-[86px] h-[86px] md:w-[188px] md:h-[188px] lg:grayscale-100 lg:hover:grayscale-0 transition duration-300 md:hover:scale-110 md:hover:rotate-3'
             />
           </div>
           <div>
             <img
               src='/images/photoshop.png'
               alt='photoshop'
-              className='floating-icon inline-block w-[188px] h-[188px] grayscale-100 hover:grayscale-0 transition duration-300 hover:scale-110 hover:rotate-3'
+              className='floating-icon inline-block w-[86px] h-[86px] md:w-[188px] md:h-[188px] lg:grayscale-100 lg:hover:grayscale-0 transition duration-300 md:hover:scale-110 md:hover:rotate-3'
             />
           </div>
           <div>
             <img
               src='/images/illustrator.png'
               alt='illustrator'
-              className='floating-icon inline-block w-[188px] h-[188px] grayscale-100 hover:grayscale-0 transition duration-300 hover:scale-110 hover:rotate-3'
+              className='floating-icon inline-block w-[86px] h-[86px] md:w-[188px] md:h-[188px] lg:grayscale-100 lg:hover:grayscale-0 transition duration-300 md:hover:scale-110 md:hover:rotate-3'
             />
           </div>
           <div>
             <img
               src='/images/frame.png'
               alt='frame'
-              className='floating-icon inline-block w-[188px] h-[188px]'
+              className='floating-icon inline-block w-[86px] h-[86px] md:w-[188px] md:h-[188px]'
             />
           </div>
         </div>

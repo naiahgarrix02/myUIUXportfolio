@@ -42,16 +42,16 @@ const Projects = () => {
   }, []);
 
   return (
-    <div id="projects-section" className="mt-[60px] ml-[60px] mr-[60px]">
-      <h1 className="text-[40px] font-regular mt-9 greyish text-center pb-[15px]">
+    <div id="projects-section" className="mt-5 ml-5 mr-5 md:mt-[60px] md:ml-[60px] md:mr-[60px]">
+      <h1 className="text-[20px] md:text-[40px] font-regular mt-9 greyish text-center pb-[15px]">
         featured projects.
       </h1>
 
       <p
         id="projects-text"
-        className="font-[Satoshi] text-[18px] font-regular text-center"
+        className="font-[Satoshi] text-[14px] md:text-[18px] font-regular text-center"
       >
-        Here are a few of my designs, showcasing my abilities and my <br />
+        Here are a few of my designs, showcasing <br />my abilities and my 
         approach to User Interface and User Experience Design.
       </p>
 
